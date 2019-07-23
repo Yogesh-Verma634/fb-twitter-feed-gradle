@@ -1,0 +1,34 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-social-facebook')
+	compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+	compile group: 'com.datumbox', name: 'datumbox-framework', version: '0.8.1', ext: 'pom'
+	compile group: 'org.facebook4j', name: 'facebook4j-core', version: '2.4.10'
+	compile group: 'com.opencsv', name: 'opencsv', version: '3.7'
+	compile group: 'org.apache.xmlbeans', name: 'xmlbeans', version: '2.4.0'
+	compile group: 'javax.json', name: 'javax.json-api', version: '1.1'
+	compile('org.springframework.boot:spring-boot-starter-social-twitter')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.5'
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
