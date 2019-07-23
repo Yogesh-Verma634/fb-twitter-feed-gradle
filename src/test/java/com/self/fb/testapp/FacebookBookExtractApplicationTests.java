@@ -1,4 +1,4 @@
-package com.tgt.merch.hackathon;
+package com.self.fb.testapp;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
